@@ -87,6 +87,23 @@ h1 {
     text-align: center;
 }
 
+.add-recipe {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    padding: 20px 20px 16px 20px;
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 100px;
+    height: max-content;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 100;
+  color: #ffffff;
+  padding: 0px;
+  margin: 0px;
+}
 
 section {
     margin: 16px;
