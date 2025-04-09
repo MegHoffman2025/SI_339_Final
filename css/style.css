@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Inter", sans-serif;
+    font-style: auto;
+    font-weight: 100;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 32px;
+    height: 60px;
+    
+}
+
+.left-nav, .right-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-nav a{
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.right-nav a {
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.left-nav a:hover, .right-nav a:hover {
+    font-size: 16px;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+a.log-out-button{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: 1px solid #000000;
+    border-radius: 100px;
+    margin-left: 20px;
+}
+
+a.log-out-button:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+section {
+    margin: 16px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.recipe-card{
+    border: none;
+    border-radius: 20px;
+}
+
+.recipe-card img{
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.info {
+    margin: 10px;
+}
+h3 {
+    margin: 6px 0px;
+}
+
+h4 {
+    margin: 6px 0px;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 900px){
+    section {
+        margin: 32px;
+    }
+    
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
