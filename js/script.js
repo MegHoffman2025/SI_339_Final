@@ -4,7 +4,7 @@ function filterFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    cards = document.querySelectorAll('.recipe-card');
+    cards = document.querySelectorAll('.all-recipes div.recipe-card');
     for (i = 0; i < cards.length; i++) {
       recipeName = cards[i].querySelector('h3').innerText
       creatorName = cards[i].querySelector('h4').innerText
