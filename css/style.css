@@ -28,6 +28,7 @@ body{
 }
 
 nav {
+    position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,11 +88,15 @@ h1 {
     text-align: center;
 }
 
+main {
+    padding: 32px 0px;
+}
+
 .add-recipe {
     position: fixed;
-    right: 32px;
-    bottom: 32px;
-    padding: 20px 20px 16px 20px;
+    right: 16px;
+    bottom: 16px;
+    padding: 16px 16px 12px 16px;
     display: inline-block;
     background-color: #000000;
     border-radius: 100px;
@@ -103,6 +108,13 @@ h1 {
   color: #ffffff;
   padding: 0px;
   margin: 0px;
+}
+
+nav input[type=text] {
+    padding: 6px 12px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 100px;
 }
 
 section {
@@ -118,6 +130,10 @@ section {
 .recipe-card{
     border: none;
     border-radius: 20px;
+}
+
+.recipe-card:hover{
+    transform: scale(1.05);
 }
 
 .recipe-card img{
@@ -140,7 +156,20 @@ h4 {
     font-weight: 400;
 }
 
+footer {
+    padding: 32px;
+    background-color: #404040;
+    color: #ffffff;
+    text-align: center;
+}
 @media screen and (min-width: 900px){
+
+    .add-recipe {
+        right: 32px;
+        bottom: 32px;
+        padding: 20px 20px 16px 20px;
+    }
+
     section {
         margin: 32px;
     }
