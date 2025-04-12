@@ -47,6 +47,47 @@ closeRecipeCreator.addEventListener('click', function(){
 })
 
 
+saveRecipe = document.querySelector('.recipe-submit')
+saveRecipe.addEventListener('click', function(){
+    console.log('adding recipe')
+
+    recipeName = document.forms['recipeForm']['recipeName'].value
+    creatorName = document.forms['recipeForm']['recipeSource'].value
+    cookTime = document.forms['recipeForm']['recipeCookTime'].value
+    ingredients = document.forms['recipeForm']['recipeIngredients'].value
+    instructions = document.forms['recipeForm']['recipeInstructions'].value
+
+
+    document.getElementById('recipeForm').style.display = 'none'
+
+    let card = document.createElement('div')
+    card.classList.add('recipe-card')
+    let info = document.createElement('div')
+    info.classList.add('info')
+
+
+    let cardName = document.createElement('h3')
+    let node = document.createTextNode(recipeName)
+    cardName.appendChild(node)
+    let cardCreator = document.createElement('h4')
+    node = document.createTextNode(creatorName)
+    cardCreator.appendChild(node)
+
+    info.appendChild(cardName)
+    info.appendChild(cardCreator)
+
+    let image = document.createElement('img')
+    image.src = '../images/empanadas.JPG'
+    image.alt = recipeName
+    card.appendChild(image)
+    card.appendChild(info)
+
+    console.log(card)
+    recipes = document.querySelector('.all-recipes div.cards')
+    recipes.appendChild(card)
+
+})
+
 
 // trying to get the plus icon to stay in the bottom right corner when scrolling the main section
 // let body_height = document.querySelector("body").scrollHeight
