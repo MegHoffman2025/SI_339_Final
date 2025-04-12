@@ -17,10 +17,18 @@ function filterFunction() {
   }
 
 
-let recipes = document.querySelectorAll('.recipe-card')
+
+  // trying to set up an item detail page
+let recipes = document.querySelectorAll('div.recipe-card')
 for (let i = 0; i < recipes.length; i++){
+    console.log(recipes[i])
+    recipeName = recipes[i].querySelector('h3').innerText
+    creatorName = recipes[i].querySelector('h4').innerText
+    recipeImage = recipes[i].querySelector('img').innerText
+    console.log(recipeName)
     recipes[i].addEventListener('click', function(){
         console.log('getting recipe')
+        
     })
 }
 

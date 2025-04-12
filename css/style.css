@@ -139,7 +139,14 @@ section {
     border-radius: 20px;
 }
 
+@keyframes card-select {
+    from {transform: scale(1.00);}
+    to {transform: scale(1.05);}
+}
+
 .recipe-card:hover{
+    animation-name: card-select;
+    animation-duration: .2s;
     transform: scale(1.05);
 }
 
