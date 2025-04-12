@@ -29,6 +29,30 @@
         <div class="add-recipe">
             <span class="material-symbols-outlined">add</span>
         </div>
+        <div class="form-popup" id="recipeForm">
+            <form action="/action_page.php" class="form-container">
+          
+                <label for="recipeName"><b>Title</b></label>
+                <input type="text" placeholder="Enter Recipe" name="recipeName" required>
+          
+                 <label for="recipeSource"><b>Recipe Source</b></label>
+                 <input type="text" placeholder="Enter Recipe Source" name="recipeSource">
+
+                 <label for="recipeCookTime"><b>Cook Time</b></label>
+                 <input type="text" placeholder="Enter Cook Time" name="recipeCookTime">
+
+                  <label for="recipeIngredients"><b>Ingredients</b></label>
+                  <input type="text-field" placeholder="Enter Ingredients" name="recipeIngredients">
+
+                 <label for="recipeInstructions"><b>Instructions</b></label>
+                 <input type="text-field" placeholder="Enter Instructions" name="recipeInstructions">
+          
+                <div class="decisions">
+                    <button type="button" class="cancel-recipe" onclick="closeForm()">Close</button>
+                    <button type="submit" class="recipe-submit">Save Recipe</button>
+                </div>
+            </form>
+          </div>
         <section class="all-recipes">
             <div class="recipes-header">
                 <h2>All Recipes</h2>

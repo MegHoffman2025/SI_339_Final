@@ -28,7 +28,6 @@ for (let i = 0; i < recipes.length; i++){
     console.log(recipeName)
     recipes[i].addEventListener('click', function(){
         console.log('getting recipe')
-        
     })
 }
 
@@ -36,6 +35,15 @@ for (let i = 0; i < recipes.length; i++){
 plus_button = document.querySelector('.add-recipe')
 plus_button.addEventListener('click', function(){
     console.log('adding a recipe')
+    document.getElementById('recipeForm').style.display = 'block'
+
+})
+
+closeRecipeCreator = document.querySelector('.cancel-recipe')
+closeRecipeCreator.addEventListener('click', function(){
+    console.log('cancelling adding recipe')
+    document.getElementById('recipeForm').style.display = 'none'
+
 })
 
 
