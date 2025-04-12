@@ -56,7 +56,7 @@ saveRecipe.addEventListener('click', function(){
     cookTime = document.forms['recipeForm']['recipeCookTime'].value
     ingredients = document.forms['recipeForm']['recipeIngredients'].value
     instructions = document.forms['recipeForm']['recipeInstructions'].value
-
+    photo = document.forms['recipeForm']['recipePhoto'].value
 
     document.getElementById('recipeForm').style.display = 'none'
 
@@ -77,7 +77,7 @@ saveRecipe.addEventListener('click', function(){
     info.appendChild(cardCreator)
 
     let image = document.createElement('img')
-    image.src = '../images/empanadas.JPG'
+    image.src = photo
     image.alt = recipeName
     card.appendChild(image)
     card.appendChild(info)

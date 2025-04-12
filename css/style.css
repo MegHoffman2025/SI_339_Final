@@ -132,6 +132,10 @@ main {
     margin: 12px;
 }
 
+#file-upload{
+    border: none;
+}
+
 .decisions{
     display: flex;
     flex-direction: row;
