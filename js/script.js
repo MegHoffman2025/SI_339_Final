@@ -51,12 +51,12 @@ saveRecipe = document.querySelector('.recipe-submit')
 saveRecipe.addEventListener('click', function(){
     console.log('adding recipe')
 
-    recipeName = document.forms['recipeForm']['recipeName'].value
-    creatorName = document.forms['recipeForm']['recipeSource'].value
-    cookTime = document.forms['recipeForm']['recipeCookTime'].value
-    ingredients = document.forms['recipeForm']['recipeIngredients'].value
-    instructions = document.forms['recipeForm']['recipeInstructions'].value
-    photo = document.forms['recipeForm']['recipePhoto'].value
+    let recipeName = document.forms['recipeForm']['recipeName'].value
+    let creatorName = document.forms['recipeForm']['recipeSource'].value
+    let cookTime = document.forms['recipeForm']['recipeCookTime'].value
+    let ingredients = document.forms['recipeForm']['recipeIngredients'].value
+    let instructions = document.forms['recipeForm']['recipeInstructions'].value
+    let photo = document.forms['recipeForm']['recipePhoto'].value
 
     document.getElementById('recipeForm').style.display = 'none'
 
@@ -77,6 +77,7 @@ saveRecipe.addEventListener('click', function(){
     info.appendChild(cardCreator)
 
     let image = document.createElement('img')
+    console.log(photo)
     image.src = photo
     image.alt = recipeName
     card.appendChild(image)
