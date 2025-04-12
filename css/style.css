@@ -228,6 +228,31 @@ h4 {
     font-weight: 400;
 }
 
+#recipe-information{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#recipe-information img{
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 20px;
+}
+
+#recipe-info{
+    grid-column: 2 / 5;
+}
+
+#ingredients{
+    grid-column: 1 / 3;
+}
+
+#instructions{
+    grid-column: 3 / 5;
+}
+
 footer {
     padding: 32px;
     background-color: #404040;
