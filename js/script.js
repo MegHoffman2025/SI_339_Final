@@ -8,12 +8,19 @@ fetch('recipes.json')
 .then(data => {
     potions = data;
     console.log(potions)
-    addDataToHTML();
+    if (window.location.pathname == '/index.html'){
+      addDataToHTML();
+    }
+    if (window.location.pathname == '/discover.html'){
+      addQuickRecipesToHTML();
+      addFavoritesToHTML();
+    }
 })
 
 
 // addine each recipe in the json file to the page
-let listRecipes = document.querySelector('div.cards')
+
+let listRecipes = document.querySelector('.all-recipes div.cards')
 function addDataToHTML(){
   potions.forEach(recipe => {
     let newCard = document.createElement('a')
@@ -27,6 +34,46 @@ function addDataToHTML(){
       </div>
     `
     listRecipes.appendChild(newCard)
+  })
+
+}
+
+let listQuickRecipes = document.querySelector('.quick div.cards')
+function addQuickRecipesToHTML(){
+  potions.forEach(recipe => {
+    if (recipe.under30 == true){
+      let newCard = document.createElement('a')
+      newCard.href = '/item_detail.html?id=' + recipe.id
+      newCard.classList.add("recipe-card")
+      newCard.innerHTML = `
+        <img src="${recipe.image}" alt="${recipe.name}">
+        <div class="info">
+          <h3>${recipe.name}</h3>
+          <h4>${recipe.creator}</h4>
+        </div>
+      `
+      listQuickRecipes.appendChild(newCard)
+    }
+  })
+
+}
+
+let listFavRecipes = document.querySelector('.favorites div.cards')
+function addFavoritesToHTML(){
+  potions.forEach(recipe => {
+    if (recipe.favorite == true){
+      let newCard = document.createElement('a')
+      newCard.href = '/item_detail.html?id=' + recipe.id
+      newCard.classList.add("recipe-card")
+      newCard.innerHTML = `
+        <img src="${recipe.image}" alt="${recipe.name}">
+        <div class="info">
+          <h3>${recipe.name}</h3>
+          <h4>${recipe.creator}</h4>
+        </div>
+      `
+      listFavRecipes.appendChild(newCard)
+    }
   })
 
 }
