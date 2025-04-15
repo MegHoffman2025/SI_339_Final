@@ -7,7 +7,6 @@ fetch('recipes.json')
 .then(response => response.json())
 .then(data => {
     potions = data;
-    console.log(potions)
     if (window.location.pathname == '/index.html'){
       addDataToHTML();
     }
@@ -79,6 +78,12 @@ function addFavoritesToHTML(){
 }
 
 
+
+
+
+
+
+
 // creating filter for recipes to search in search bar
 function filterFunction() {
     var input, filter, ul, li, a, i;
@@ -97,12 +102,32 @@ function filterFunction() {
   }
 
 
-hamburger = document.getElementById('menu')
-hamburger.addEventListener('click', function(){
-  console.log('getting menu')
-  document.getElementById('links').style.display = "flex"
 
-})
+
+
+
+// creating event listener for when user clicks on hamburger menu
+hamburgers = document.querySelectorAll('.menu')
+for (i = 0; i < hamburgers.length; i++){
+  hamburgers[i].addEventListener('click', function(){
+    console.log('getting menu')
+    document.getElementById('links').style.right = ""
+    document.getElementById('links').style.left = "100%"
+    let id = null;
+    const elem = document.getElementById('links');
+    let pos = elem.style.right;
+    clearInterval(id);
+    id = setInterval(frame, 10);
+    function frame() {
+      if (pos == "") {
+        clearInterval(id);
+      } else {
+        pos = ""
+        elem.style.left = "100%"
+      }
+    }
+  })
+}
 
 plus_button = document.querySelector('.add-recipe')
 plus_button.addEventListener('click', function(){

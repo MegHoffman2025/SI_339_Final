@@ -8,7 +8,6 @@ fetch('recipes.json')
 .then(response => response.json())
 .then(data => {
     potions = data;
-    console.log(potions)
     showDetail();
 })
 
@@ -19,7 +18,6 @@ function showDetail (){
       return value.id == productID
     })[0];
   
-    console.log(thisRecipe)
     // if no product with the id retirn to home page
     if(!thisRecipe){
       window.location.href = '/';
