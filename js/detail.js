@@ -33,9 +33,14 @@ function showDetail (){
     
     ing = document.querySelector('.ingredients')
     for (i = 0; i < thisRecipe.ingredients.length; i++){
-      let newIngredient = document.createElement('li')
-      newIngredient.innerText = thisRecipe.ingredients[i]
-      ing.appendChild(newIngredient)
+        console.log()
+        let newIngredient = document.createElement('li')
+        newIngredient.innerText = thisRecipe.ingredients[i]
+        if (thisRecipe.ingredients[i][0] == "*"){
+             newIngredient = document.createElement('h3');
+             newIngredient.innerText = thisRecipe.ingredients[i].substr(2);
+        }
+        ing.appendChild(newIngredient)
     }
   
       
