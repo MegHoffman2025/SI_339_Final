@@ -13,7 +13,7 @@ fetch('recipes.json')
 
 
 // addine each recipe in the json file to the page
-let listRecipes = document.querySelector('.all-recipes div.cards')
+let listRecipes = document.querySelector('div.cards')
 function addDataToHTML(){
   potions.forEach(recipe => {
     let newCard = document.createElement('a')
