@@ -100,7 +100,7 @@ saveRecipe.addEventListener('click', function(){
 
 
 
-
+// code referenced from https://www.youtube.com/watch?v=okyfcpZfPAU#:~:text=How%20to%20Make%20Ecommerce%20Product,www.lundevweb....
 
 // importing recipes to create detail page
 let potions = null;
