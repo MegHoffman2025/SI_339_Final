@@ -1,4 +1,37 @@
 
+// code referenced from https://www.youtube.com/watch?v=okyfcpZfPAU#:~:text=How%20to%20Make%20Ecommerce%20Product,www.lundevweb....
+
+// importing recipes to create detail page
+let potions = null;
+fetch('recipes.json')
+.then(response => response.json())
+.then(data => {
+    potions = data;
+    console.log(potions)
+    addDataToHTML();
+})
+
+
+// addine each recipe in the json file to the page
+let listRecipes = document.querySelector('.all-recipes div.cards')
+function addDataToHTML(){
+  potions.forEach(recipe => {
+    let newCard = document.createElement('a')
+    newCard.href = '/item_detail.html?id=' + recipe.id
+    newCard.classList.add("recipe-card")
+    newCard.innerHTML = `
+      <img src="${recipe.image}" alt="${recipe.name}">
+      <div class="info">
+        <h3>${recipe.name}</h3>
+        <h4>${recipe.creator}</h4>
+      </div>
+    `
+    listRecipes.appendChild(newCard)
+  })
+
+}
+
+
 // creating filter for recipes to search in search bar
 function filterFunction() {
     var input, filter, ul, li, a, i;
@@ -82,41 +115,6 @@ saveRecipe.addEventListener('click', function(){
 })
 
 
-
-
-
-
-// code referenced from https://www.youtube.com/watch?v=okyfcpZfPAU#:~:text=How%20to%20Make%20Ecommerce%20Product,www.lundevweb....
-
-// importing recipes to create detail page
-let potions = null;
-fetch('recipes.json')
-.then(response => response.json())
-.then(data => {
-    potions = data;
-    console.log(potions)
-    addDataToHTML();
-})
-
-
-// addine each recipe in the json file to the page
-let listRecipes = document.querySelector('.all-recipes div.cards')
-function addDataToHTML(){
-  potions.forEach(recipe => {
-    let newCard = document.createElement('a')
-    newCard.href = '/item_detail.html?id=' + recipe.id
-    newCard.classList.add("recipe-card")
-    newCard.innerHTML = `
-      <img src="${recipe.image}" alt="${recipe.name}">
-      <div class="info">
-        <h3>${recipe.name}</h3>
-        <h4>${recipe.creator}</h4>
-      </div>
-    `
-    listRecipes.appendChild(newCard)
-  })
-
-}
 
 
 
