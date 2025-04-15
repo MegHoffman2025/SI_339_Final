@@ -14,31 +14,36 @@
     <header>
         <a class="skip" href="#main">Skip To Main</a>
         <nav>
-            <div class="left-nav">
-                <a href="index.html" class="current">Recipes</a>
-                <a href="discover.html">Discover</a>
-            </div>
-            <div class="right-nav">
-                <a href="profile.html">Meghan Hoffman</a>
-                <a href="" class="log-out-button">Log Out</a>
+            <span class="material-symbols-outlined" id="menu">menu</span>
+            <div id="links">
+                <div class="left-nav">
+                    <a href="index.html" class="current">Recipes</a>
+                    <a href="discover.html">Discover</a>
+                </div>
+                <div class="right-nav">
+                    <a href="profile.html">Meghan Hoffman</a>
+                    <a href="" class="log-out-button">Log Out</a>
+                </div>
             </div>
         </nav>
-        <h1 id="recipeName">Recipe Name</h1>
+        <h1 class="name"></h1>
     </header>
     <main id="#main">
         <section>
             <div id="recipe-information">
-                <img src="images/ceviche.jpeg">
+                <img src="" alt="" class="image">
                 <div id="recipe-info">
                     <h2>Recipe Details</h2>
                     <h3>Creator:</h3>
+                    <h4 class="creator"></h4>
                     <h3>Cook Time:</h3>
-                    <h3></h3>
+                    <h4 class="cookTime"></h4>
                 </div>
-                <div id="ingredients">
+                <div>
                     <h2>Ingredients</h2>
+                    <ul class="ingredients"></ul>
                 </div>
-                <div id="instructions">
+                <div class="instructions">
                     <h2>Instructions</h2>
                 </div>
             </div>
@@ -48,5 +53,5 @@
         <p>This is a website to help you reach all of your cooking goals</p>
     </footer>
 </body>
-<script src="js/script.js"></script>
+<script src="js/detail.js"></script>
 </html>

@@ -4,7 +4,7 @@ function filterFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    cards = document.querySelectorAll('.all-recipes div.recipe-card');
+    cards = document.querySelectorAll('.all-recipes a.recipe-card');
     for (i = 0; i < cards.length; i++) {
       recipeName = cards[i].querySelector('h3').innerText
       creatorName = cards[i].querySelector('h4').innerText
@@ -31,6 +31,12 @@ for (let i = 0; i < recipes.length; i++){
     })
 }
 
+hamburger = document.getElementById('menu')
+hamburger.addEventListener('click', function(){
+  console.log('getting menu')
+  document.getElementById('links').style.display = "flex"
+
+})
 
 plus_button = document.querySelector('.add-recipe')
 plus_button.addEventListener('click', function(){
@@ -88,6 +94,51 @@ saveRecipe.addEventListener('click', function(){
     recipes.appendChild(card)
 
 })
+
+
+
+
+
+
+
+
+// importing recipes to create detail page
+let potions = null;
+fetch('recipes.json')
+.then(response => response.json())
+.then(data => {
+    potions = data;
+    console.log(potions)
+    addDataToHTML();
+})
+
+
+// addine each recipe in the json file to the page
+let listRecipes = document.querySelector('.all-recipes div.cards')
+function addDataToHTML(){
+  potions.forEach(recipe => {
+    let newCard = document.createElement('a')
+    newCard.href = '/item_detail.html?id=' + recipe.id
+    newCard.classList.add("recipe-card")
+    newCard.innerHTML = `
+      <img src="${recipe.image}" alt="${recipe.name}">
+      <div class="info">
+        <h3>${recipe.name}</h3>
+        <h4>${recipe.creator}</h4>
+      </div>
+    `
+    listRecipes.appendChild(newCard)
+  })
+
+}
+
+
+
+
+
+
+
+
 
 
 // trying to get the plus icon to stay in the bottom right corner when scrolling the main section
