@@ -7,12 +7,16 @@ fetch('recipes.json')
 .then(response => response.json())
 .then(data => {
     potions = data;
+    console.log(potions)
     if (window.location.pathname == '/index.html'){
       addDataToHTML();
     }
     if (window.location.pathname == '/discover.html'){
       addQuickRecipesToHTML();
       addFavoritesToHTML();
+    }
+    if (window.location.pathname == '/item_detail.html'){
+      showDetail();
     }
 })
 
@@ -78,7 +82,43 @@ function addFavoritesToHTML(){
 }
 
 
+function showDetail (){
+  let detail = document.querySelector('#recipe-information');
+  let productID = new URLSearchParams(window.location.search).get('id');
+  let thisRecipe = potions.filter(value => {
+    return value.id == productID
+  })[0];
 
+  // if no product with the id retirn to home page
+  if(!thisRecipe){
+    window.location.href = '/';
+  }
+
+  detail.querySelector('.image').src = thisRecipe.image
+  detail.querySelector('.image').alt = thisRecipe.name
+  document.querySelector('.name').innerText = thisRecipe.name
+  document.querySelector('.creator').innerText = thisRecipe.creator
+  document.querySelector('.cookTime').innerText = thisRecipe.cookTime
+  
+  ing = document.querySelector('.ingredients')
+  for (i = 0; i < thisRecipe.ingredients.length; i++){
+      console.log()
+      let newIngredient = document.createElement('li')
+      newIngredient.innerText = thisRecipe.ingredients[i]
+      if (thisRecipe.ingredients[i][0] == "*"){
+           newIngredient = document.createElement('h3');
+           newIngredient.innerText = thisRecipe.ingredients[i].slice(2, -2)
+      }
+      ing.appendChild(newIngredient)
+  }
+
+    
+  let newInstructions = document.createElement('p')
+  newInstructions.innerText = thisRecipe.instructions
+  detail.querySelector('.instructions').appendChild(newInstructions)
+
+
+}
 
 
 
@@ -111,20 +151,11 @@ hamburgers = document.querySelectorAll('.menu')
 for (i = 0; i < hamburgers.length; i++){
   hamburgers[i].addEventListener('click', function(){
     console.log('getting menu')
-    document.getElementById('links').style.right = ""
-    document.getElementById('links').style.left = "100%"
-    let id = null;
-    const elem = document.getElementById('links');
-    let pos = elem.style.right;
-    clearInterval(id);
-    id = setInterval(frame, 10);
-    function frame() {
-      if (pos == "") {
-        clearInterval(id);
-      } else {
-        pos = ""
-        elem.style.left = "100%"
-      }
+    console.log(document.getElementById("links").style.left)
+    if (document.getElementById("links").style.left == '-800px'){
+        document.getElementById("links").style.left = '0px'
+    } else {
+        document.getElementById("links").style.left = '-800px'
     }
   })
 }
