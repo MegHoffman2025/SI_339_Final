@@ -87,6 +87,29 @@
                         "1/2 Shallot, sliced super thin",
                         "3 sprig of cilantro, picked"],
         "instructions": "**Beets** Place beets, salt and vinegar in a pot and fill with water. Let boil, and turn down to medium. Check them 30 min later with a fork. When knife or fork can go in easily, remove from water. Let cool for 5 minutes and then peel/remove skin (wear gloves) Cut into 3/4 inch cubes. **Tarragon Vinaigrette Dressing** Add shallot, honey, vinegar, Canola oil, water and salt to blender. Blend until creamy and thick (almost like a milkshake) Add Tarragon and blend until green. **Pistachios** Pre-heat oven to 350 degree. Roast pistachios on 350 degrees until golden brown. LET COOL COMPLETELY Add pistachios, healthy pinch of salt, and 1 Tbsp sugar. Pulse 5 or 6 times...then taste for seasoning (should be sweet with a hint of saltiness). May need a bit more salt. Then chop more until chunky (not powder). **Dress and Garnish** Dress beets (add enough dressing to coat beets. Pinch of salt. Top with crushed pistachios. Top with shaved shallots. Top with cilantro leaves"
-    }
+    },
+    {
+        "id": 4,
+        "image": "images/saffron_risotto.jpg",
+        "name": "Zucchini and Saffron Risotto",
+        "creator": "Milk Street Meditrannean Cook Book",
+        "cookTime": "35 min",
+        "under30": false,
+        "favorite": true,
+        "ingredients": ["1 Tablespoon finely Grated Orange Zest",
+                        "2 Tablespoon orange juice",
+                        "1/2 Teaspoon saffron threads",
+                        "Kosher Salt",
+                        "Ground Black Pepper",
 
+                        "4 Tablespoons extra-virgin olive oil",
+                        "1 large zucchini",
+                        "2 fresno chilles (or 1/2 teaspoon red pepper flakes)",
+                        "1 cup Arborio or carnaroli rice",
+                        "1 ounces parmesian cheese",
+                        "2 tablespoons salted butter",
+                        "1/2 cup light packed fresh basil"
+                    ],
+        "instructions": "In a small saucepan, combine 4 cups water, the orange zest, saffron, ½ teaspoon salt and ¼ teaspoon pepper. Bring to a simmer over medium-high, then cover and reduce to low to keep warm."
+    }
 ]

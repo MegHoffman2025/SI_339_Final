@@ -1,4 +1,3 @@
-
 // code referenced from https://www.youtube.com/watch?v=okyfcpZfPAU#:~:text=How%20to%20Make%20Ecommerce%20Product,www.lundevweb....
 
 // importing recipes to create detail page
@@ -124,6 +123,7 @@ function showDetail (){
 
 
 
+
 // creating filter for recipes to search in search bar
 function filterFunction() {
     var input, filter, ul, li, a, i;
@@ -188,32 +188,17 @@ saveRecipe.addEventListener('click', function(){
 
     document.getElementById('recipeForm').style.display = 'none'
 
-    let card = document.createElement('div')
-    card.classList.add('recipe-card')
-    let info = document.createElement('div')
-    info.classList.add('info')
-
-
-    let cardName = document.createElement('h3')
-    let node = document.createTextNode(recipeName)
-    cardName.appendChild(node)
-    let cardCreator = document.createElement('h4')
-    node = document.createTextNode(creatorName)
-    cardCreator.appendChild(node)
-
-    info.appendChild(cardName)
-    info.appendChild(cardCreator)
-
-    let image = document.createElement('img')
-    console.log(photo)
-    image.src = photo
-    image.alt = recipeName
-    card.appendChild(image)
-    card.appendChild(info)
-
-    console.log(card)
-    recipes = document.querySelector('.all-recipes div.cards')
-    recipes.appendChild(card)
+  potions.add({
+      id: 2,
+      image: photo,
+      name: recipeName,
+      creator: creatorName,
+      cookTime: cookTime,
+      under30: false,
+      favorite: true,
+      ingredients: ingredients,
+      instructions: instructions,
+    })
 
 })
 
