@@ -230,7 +230,7 @@ section {
 .recipe-card img{
     display: inline-block;
     height: 75px;
-    width: 20%;
+    width: 20vw;
     object-fit: cover;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
@@ -239,13 +239,13 @@ section {
 a.recipe-card{
     color: #000000;
     text-decoration: none;
+    justify-content: left;
 }
 
 .info {
     vertical-align: center;
     display: inline-block;
     margin: 0px 10px;
-    width: 100%;
 }
 
 h3 {

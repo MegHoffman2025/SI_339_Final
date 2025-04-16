@@ -7,14 +7,14 @@ fetch('/SI_339_Final/recipes.json')
 .then(data => {
     potions = data;
     console.log(potions)
-    if (window.location.pathname == '/index.html'){
+    if (window.location.pathname == '/SI_339_Final/index.html'){
       addDataToHTML();
     }
-    if (window.location.pathname == '/discover.html'){
+    if (window.location.pathname == '/SI_339_Final/discover.html'){
       addQuickRecipesToHTML();
       addFavoritesToHTML();
     }
-    if (window.location.pathname == '/item_detail.html'){
+    if (window.location.pathname == '/SI_339_Final/item_detail.html'){
       showDetail();
     }
 })
