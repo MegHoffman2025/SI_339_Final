@@ -1,3 +1,8 @@
-Code for making detail pages referenced frmo"
+Code for making detail pages referenced from:
 
     https://www.youtube.com/watch?v=okyfcpZfPAU#:~:text=How%20to%20Make%20Ecommerce%20Product,www.lundevweb....
+
+
+Other Code Help:
+
+W3Schools.com

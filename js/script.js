@@ -2,7 +2,7 @@
 
 // importing recipes to create detail page
 let potions = null;
-fetch('../../recipes.json')
+fetch('/recipes.json')
 .then(response => response.json())
 .then(data => {
     potions = data;
