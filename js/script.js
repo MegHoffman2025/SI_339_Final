@@ -84,6 +84,7 @@ function addFavoritesToHTML(){
 function showDetail (){
   let detail = document.querySelector('#recipe-information');
   let productID = new URLSearchParams(window.location.search).get('id');
+  console.log(productID)
   let thisRecipe = potions.filter(value => {
     return value.id == productID
   })[0];
