@@ -7,6 +7,7 @@ fetch('/SI_339_Final/recipes.json')
 .then(data => {
     potions = data;
     console.log(potions)
+    console.log(window.location.pathname)
     if (window.location.pathname == '/SI_339_Final/index.html'){
       addDataToHTML();
     }
