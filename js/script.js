@@ -14,6 +14,7 @@ fetch('/SI_339_Final/recipes.json')
       addQuickRecipesToHTML();
       addFavoritesToHTML();
     }
+    console.log(window.location.pathname)
     if (window.location.pathname.indexOf('/SI_339_Final/item_detail.html') > -1){
       showDetail();
     }
