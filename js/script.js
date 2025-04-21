@@ -27,7 +27,7 @@ let listRecipes = document.querySelector('.all-recipes div.cards')
 function addDataToHTML(){
   potions.forEach(recipe => {
     let newCard = document.createElement('a')
-    newCard.href = '/item_detail.html?id=' + recipe.id
+    newCard.href = '/SI_339_Final/item_detail.html?id=' + recipe.id
     newCard.classList.add("recipe-card")
     newCard.innerHTML = `
       <img src="${recipe.image}" alt="${recipe.name}">
