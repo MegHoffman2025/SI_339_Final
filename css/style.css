@@ -122,9 +122,16 @@ h1 {
     color: #000000;
 }
 
+/* Code reference for how to center popup */
+/* https://stackoverflow.com/questions/19467693/how-to-make-popup-look-at-the-centre-of-the-screen */
 .form-popup{
+    /* display should be none */
     display: none;
-    position: absolute;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     background-color: #ffffff;
     width: 50%;
     padding: 16px;

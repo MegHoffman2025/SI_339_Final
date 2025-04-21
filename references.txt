@@ -2,6 +2,9 @@ Code for making detail pages referenced from:
 
     https://www.youtube.com/watch?v=okyfcpZfPAU#:~:text=How%20to%20Make%20Ecommerce%20Product,www.lundevweb....
 
+Code reference for how to center popup referenced from:
+
+    https://stackoverflow.com/questions/19467693/how-to-make-popup-look-at-the-centre-of-the-screen */
 
 Other Code Help:
 
