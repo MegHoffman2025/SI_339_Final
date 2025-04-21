@@ -49,7 +49,7 @@ function addQuickRecipesToHTML(){
   potions.forEach(recipe => {
     if (recipe.under30 == true){
       let newCard = document.createElement('a')
-      newCard.href = '/item_detail.html?id=' + recipe.id
+      newCard.href = '/SI_339_Final/item_detail.html?id=' + recipe.id
       newCard.classList.add("recipe-card")
       newCard.innerHTML = `
         <img src="${recipe.image}" alt="${recipe.name}">
@@ -69,7 +69,7 @@ function addFavoritesToHTML(){
   potions.forEach(recipe => {
     if (recipe.favorite == true){
       let newCard = document.createElement('a')
-      newCard.href = '/item_detail.html?id=' + recipe.id
+      newCard.href = '/SI_339_Final/item_detail.html?id=' + recipe.id
       newCard.classList.add("recipe-card")
       newCard.innerHTML = `
         <img src="${recipe.image}" alt="${recipe.name}">
