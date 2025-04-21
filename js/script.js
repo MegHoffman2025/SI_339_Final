@@ -14,6 +14,9 @@ fetch('/SI_339_Final/recipes.json')
       addQuickRecipesToHTML();
       addFavoritesToHTML();
     }
+    if (window.location.pathname == '/SI_339_Final/profile.html'){
+      addNumRecipes();
+    }
     console.log(window.location.pathname)
     if (window.location.pathname.indexOf('item_detail.html') > -1){
       showDetail();
@@ -79,6 +82,17 @@ function addFavoritesToHTML(){
     }
   })
 
+}
+
+let numRecipes = document.querySelector('.num_recipes')
+let recipeCount = 0;
+function addNumRecipes(){
+  potions.forEach(recipe => {
+    recipeCount++;
+  })
+  let count = document.createElement('h4')
+  count.innerText = recipeCount
+  numRecipes.append(count)
 }
 
 

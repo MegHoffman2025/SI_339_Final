@@ -100,10 +100,6 @@ h1 {
     text-align: center;
 }
 
-main {
-    padding: 32px 0px;
-}
-
 .add-recipe {
     position: fixed;
     right: 16px;
@@ -272,6 +268,34 @@ h4 {
     border-radius: 20px;
 }
 
+.profile_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_header img{
+    display: inline-block;
+    width: 10%;
+    border-radius: 1000px;
+}
+
+.profile_information {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.num_recipes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3e3e3;
+    padding: 12px;
+    border-radius: 20px;
+}
+
 footer {
     padding: 32px;
     background-color: #404040;
@@ -385,6 +409,11 @@ footer {
     .instructions{
         grid-column: 3 / 5;
     }
+
+    .profile_information {
+        grid-template-columns: 1fr 1fr;
+    }
+    
 }
 
 @media screen and (min-width: 1600px){
