@@ -14,7 +14,7 @@ fetch('/SI_339_Final/recipes.json')
       addQuickRecipesToHTML();
       addFavoritesToHTML();
     }
-    if (window.location.pathname == '/SI_339_Final/item_detail.html'){
+    if (window.location.pathname.indexOf('/SI_339_Final/item_detail.html') > -1){
       showDetail();
     }
 })
