@@ -154,7 +154,7 @@ h1 {
 
 .small-info{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -461,6 +461,10 @@ footer {
 
     .form-popup{
         width: 60%;
+    }
+    
+    .small-info {
+        grid-template-columns: 1fr 1fr;
     }
     
     .cards {
