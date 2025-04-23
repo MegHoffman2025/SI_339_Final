@@ -116,13 +116,19 @@ function showDetail (){
   document.querySelector('.cookTime').innerText = thisRecipe.cookTime
   
   ing = document.querySelector('.ingredients')
+  words = ''
   for (i = 0; i < thisRecipe.ingredients.length; i++){
       console.log()
-      let newIngredient = document.createElement('li')
-      newIngredient.innerText = thisRecipe.ingredients[i]
-      if (thisRecipe.ingredients[i][0] == "*"){
-           newIngredient = document.createElement('h3');
-           newIngredient.innerText = thisRecipe.ingredients[i].slice(2, -2)
+      if (thisRecipe.ingredients[i] == '/n'){
+        let newIngredient = document.createElement('li')
+        newIngredient.innerText = words
+        if (words[0] == "*"){
+          newIngredient = document.createElement('h3');
+          newIngredient.innerText = words.slice(2, -2)
+        }
+        words = ''
+      } else {
+        words = words + thisRecipe.ingredients[i]
       }
       ing.appendChild(newIngredient)
   }
@@ -205,10 +211,6 @@ saveRecipe.addEventListener('click', function(){
 
     document.getElementById('recipeForm').style.display = 'none'
 
-    let csv_ingredient_string = ingredients_string.replace('/n', ',')
-    console.log(ingredients_string)
-    console.log(JSON.stringify(ingredients_string))
-
    let recipe = {
       id: 2,
       image: photo,
@@ -217,7 +219,7 @@ saveRecipe.addEventListener('click', function(){
       cookTime: cookTime,
       under30: false,
       favorite: fav,
-      ingredients: ingredients,
+      ingredients: ingredients_string,
       instructions: instructions,
     }
 
