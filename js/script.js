@@ -115,7 +115,9 @@ function showDetail (){
   document.querySelector('.creator').innerText = thisRecipe.creator
   document.querySelector('.cookTime').innerText = thisRecipe.cookTime
   
-  ing = document.querySelector('.ingredients').innerText = thisRecipe.ingredients
+  let newIngredients = document.createElement('p')
+  newIngredients.innerText = thisRecipe.ingredients
+  detail.querySelector('.ingredients').appendChild(newIngredients)
   // words = ''
   // for (i = 0; i < thisRecipe.ingredients.length; i++){
   //     console.log()
