@@ -124,6 +124,7 @@ function showDetail (){
            newIngredient = document.createElement('h3');
            newIngredient.innerText = thisRecipe.ingredients[i].slice(2, -2)
       }
+      console.log(newIngredient)
       ing.appendChild(newIngredient)
   }
 
