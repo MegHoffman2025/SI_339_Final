@@ -57,7 +57,7 @@ nav {
     border-bottom-right-radius: 20px;
 }
 
-
+/* https://www.w3schools.com/howto/howto_css_overlay.asp */
 #overlay {
     position: fixed;
     display: none;
