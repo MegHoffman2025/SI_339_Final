@@ -42,15 +42,32 @@
                 <label for="recipeSource"><b>Recipe Source</b></label>
                 <input type="text" placeholder="Enter Recipe Source" name="recipeSource" required>
 
-                <label for="recipeCookTime"><b>Cook Time</b></label>
-                <input type="text" placeholder="Enter Cook Time" name="recipeCookTime">
+                <div class="small-info">
+                    <div class="inside">
+                        <label for="recipeCookTime"><b>Cook Time</b></label>
+                        <input type="text" placeholder="Enter Cook Time" name="recipeCookTime">
+                    </div>
 
-                <label for="recipeIngredients"><b>Ingredients</b></label>
-                <input type="text-field" placeholder="Enter Ingredients" name="recipeIngredients">
+                    <!-- code from https://www.w3schools.com/howto/howto_css_switch.asp -->
+                     <div class="inside">
+                        <label for="fav"><b>Favorite</b></label>
+                        <label class="switch">
+                            <input type="checkbox" name="fav">
+                            <span class="slider round"></span>
+                        </label>
+                     </div>
+                </div>
 
-                <label for="recipeInstructions"><b>Instructions</b></label>
-                <input type="text-field" placeholder="Enter Instructions" name="recipeInstructions">
-          
+                <div class="small-info">
+                    <div class="inside">
+                        <label for="recipeIngredients"><b>Ingredients</b></label>
+                        <textarea rows="10" name="recipeIngredients" id=""></textarea>
+                    </div>
+                    <div class="inside">
+                        <label for="recipeInstructions"><b>Instructions</b></label>
+                        <textarea rows="10" name="recipeInstructions" id=""></textarea>
+                    </div>
+                </div>
                 <label for="recipePhoto"><b>Photo</b></label>
                 <input type="file" name="recipePhoto" id="file-upload">
 

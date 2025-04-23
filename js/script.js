@@ -198,13 +198,17 @@ saveRecipe.addEventListener('click', function(){
     let recipeName = document.forms['recipeForm']['recipeName'].value
     let creatorName = document.forms['recipeForm']['recipeSource'].value
     let cookTime = document.forms['recipeForm']['recipeCookTime'].value
-    let ingredients = document.forms['recipeForm']['recipeIngredients'].value
+    let fav = document.forms['recipeForm']['fav'].checked
+    let ingredients_string = document.forms['recipeForm']['recipeIngredients'].value
     let instructions = document.forms['recipeForm']['recipeInstructions'].value
     let photo = document.forms['recipeForm']['recipePhoto'].value
 
     document.getElementById('recipeForm').style.display = 'none'
 
-    console.log(potions)
+    let csv_ingredient_string = ingredients_string.replace('/n', ',')
+    console.log(ingredients_string)
+    console.log(JSON.stringify(ingredients_string))
+
    let recipe = {
       id: 2,
       image: photo,
@@ -212,7 +216,7 @@ saveRecipe.addEventListener('click', function(){
       creator: creatorName,
       cookTime: cookTime,
       under30: false,
-      favorite: true,
+      favorite: fav,
       ingredients: ingredients,
       instructions: instructions,
     }
