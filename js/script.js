@@ -204,7 +204,8 @@ saveRecipe.addEventListener('click', function(){
 
     document.getElementById('recipeForm').style.display = 'none'
 
-  potions.add({
+    console.log(potions)
+   let recipe = {
       id: 2,
       image: photo,
       name: recipeName,
@@ -214,8 +215,10 @@ saveRecipe.addEventListener('click', function(){
       favorite: true,
       ingredients: ingredients,
       instructions: instructions,
-    })
+    }
 
+    let recipeJSON = JSON.stringify(recipe)
+    console.log(recipeJSON)
 })
 
 
