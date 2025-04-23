@@ -168,8 +168,10 @@ hamburger.addEventListener('click', function(){
   console.log('getting menu')
   if ((document.getElementById("links").style.visibility == 'hidden') || (document.getElementById("links").style.visibility == '')){
     document.getElementById("links").style.visibility = 'visible'
+    document.getElementById("overlay").style.display = "block";
   } else {
     document.getElementById("links").style.visibility = 'hidden'
+    document.getElementById("overlay").style.display = "none";
   }
   })
 
@@ -179,6 +181,10 @@ window.addEventListener("resize", function(){
   }
 })
 
+document.querySelector("#overlay").addEventListener("click", function(){
+    document.getElementById("links").style.visibility = 'hidden'
+    document.getElementById("overlay").style.display = "none";
+})
 
 if ((window.location.pathname == '/SI_339_Final/') || (window.location.pathname == '/SI_339_Final/index.html')){
   plus_button = document.querySelector('.add-recipe')
