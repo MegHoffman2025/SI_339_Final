@@ -5,6 +5,7 @@ let potions = null;
 fetch('/SI_339_Final/recipes.json')
 .then(response => response.json())
 .then(data => {
+    console.log(potions)
     potions = data;
     potions.sort(function(a,b){
       return a.name - b.name
