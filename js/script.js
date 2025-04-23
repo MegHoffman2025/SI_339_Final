@@ -179,6 +179,8 @@ window.addEventListener("resize", function(){
   if (window.innerWidth >= 900){
     document.getElementById("links").style.visibility = 'visible'
     document.getElementById("overlay").style.display = "none";
+  } else {
+    document.getElementById("links").style.visibility = 'hidden'
   }
 })
 
