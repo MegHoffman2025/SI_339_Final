@@ -115,23 +115,23 @@ function showDetail (){
   document.querySelector('.creator').innerText = thisRecipe.creator
   document.querySelector('.cookTime').innerText = thisRecipe.cookTime
   
-  ing = document.querySelector('.ingredients')
-  words = ''
-  for (i = 0; i < thisRecipe.ingredients.length; i++){
-      console.log()
-      if (thisRecipe.ingredients[i] == '/n'){
-        let newIngredient = document.createElement('li')
-        newIngredient.innerText = words
-        if (words[0] == "*"){
-          newIngredient = document.createElement('h3');
-          newIngredient.innerText = words.slice(2, -2)
-        }
-        words = ''
-      } else {
-        words = words + thisRecipe.ingredients[i]
-      }
-      ing.appendChild(newIngredient)
-  }
+  ing = document.querySelector('.ingredients').innerText = thisRecipe.ingredients
+  // words = ''
+  // for (i = 0; i < thisRecipe.ingredients.length; i++){
+  //     console.log()
+  //     if (thisRecipe.ingredients[i] == '/n'){
+  //       let newIngredient = document.createElement('li')
+  //       newIngredient.innerText = words
+  //       if (words[0] == "*"){
+  //         newIngredient = document.createElement('h3');
+  //         newIngredient.innerText = words.slice(2, -2)
+  //       }
+  //       words = ''
+  //     } else {
+  //       words = words + thisRecipe.ingredients[i]
+  //     }
+  //     ing.appendChild(newIngredient)
+  // }
 
     
   let newInstructions = document.createElement('p')
