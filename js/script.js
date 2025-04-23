@@ -115,25 +115,17 @@ function showDetail (){
   document.querySelector('.creator').innerText = thisRecipe.creator
   document.querySelector('.cookTime').innerText = thisRecipe.cookTime
   
-  let newIngredients = document.createElement('p')
-  newIngredients.innerText = thisRecipe.ingredients
-  detail.querySelector('.ingredients').appendChild(newIngredients)
-  // words = ''
-  // for (i = 0; i < thisRecipe.ingredients.length; i++){
-  //     console.log()
-  //     if (thisRecipe.ingredients[i] == '/n'){
-  //       let newIngredient = document.createElement('li')
-  //       newIngredient.innerText = words
-  //       if (words[0] == "*"){
-  //         newIngredient = document.createElement('h3');
-  //         newIngredient.innerText = words.slice(2, -2)
-  //       }
-  //       words = ''
-  //     } else {
-  //       words = words + thisRecipe.ingredients[i]
-  //     }
-  //     ing.appendChild(newIngredient)
-  // }
+  ing = document.querySelector('.ingredients')
+  for (i = 0; i < thisRecipe.ingredients.length; i++){
+      console.log()
+      let newIngredient = document.createElement('li')
+      newIngredient.innerText = thisRecipe.ingredients[i]
+      if (thisRecipe.ingredients[i][0] == "*"){
+           newIngredient = document.createElement('h3');
+           newIngredient.innerText = thisRecipe.ingredients[i].slice(2, -2)
+      }
+      ing.appendChild(newIngredient)
+  }
 
     
   let newInstructions = document.createElement('p')
@@ -213,6 +205,10 @@ saveRecipe.addEventListener('click', function(){
 
     document.getElementById('recipeForm').style.display = 'none'
 
+    let csv_ingredient_string = ingredients_string.split('\n')
+
+    console.log(csv_ingredient_string)
+
    let recipe = {
       id: 2,
       image: photo,
@@ -221,7 +217,7 @@ saveRecipe.addEventListener('click', function(){
       cookTime: cookTime,
       under30: false,
       favorite: fav,
-      ingredients: ingredients_string,
+      ingredients: csv_ingredient_string,
       instructions: instructions,
     }
 
