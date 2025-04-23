@@ -163,18 +163,22 @@ function filterFunction() {
 
 
 // creating event listener for when user clicks on hamburger menu
-hamburgers = document.querySelectorAll('.menu')
-for (i = 0; i < hamburgers.length; i++){
-  hamburgers[i].addEventListener('click', function(){
-    console.log('getting menu')
-    console.log(document.getElementById("links").style.left)
-    if (document.getElementById("links").style.left == '-800px'){
-        document.getElementById("links").style.left = '0px'
-    } else {
-        document.getElementById("links").style.left = '-800px'
-    }
+hamburger = document.querySelector('.menu')
+hamburger.addEventListener('click', function(){
+  console.log('getting menu')
+  if ((document.getElementById("links").style.visibility == 'hidden') || (document.getElementById("links").style.visibility == '')){
+    document.getElementById("links").style.visibility = 'visible'
+  } else {
+    document.getElementById("links").style.visibility = 'hidden'
+  }
   })
-}
+
+window.addEventListener("resize", function(){
+  if (window.innerWidth >= 900){
+    document.getElementById("links").style.visibility = 'visible'
+  }
+})
+
 
 if ((window.location.pathname == '/SI_339_Final/') || (window.location.pathname == '/SI_339_Final/index.html')){
   plus_button = document.querySelector('.add-recipe')
