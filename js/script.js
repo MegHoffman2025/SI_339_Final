@@ -176,54 +176,56 @@ for (i = 0; i < hamburgers.length; i++){
   })
 }
 
-plus_button = document.querySelector('.add-recipe')
-plus_button.addEventListener('click', function(){
-    console.log('adding a recipe')
-    document.getElementById('recipeForm').style.display = 'block'
+if ((window.location.pathname == '/SI_339_Final/') || (window.location.pathname == '/SI_339_Final/index.html')){
+  plus_button = document.querySelector('.add-recipe')
+  plus_button.addEventListener('click', function(){
+      console.log('adding a recipe')
+      document.getElementById('recipeForm').style.display = 'block'
 
-})
+  })
 
-closeRecipeCreator = document.querySelector('.cancel-recipe')
-closeRecipeCreator.addEventListener('click', function(){
-    console.log('cancelling adding recipe')
-    document.getElementById('recipeForm').style.display = 'none'
+  closeRecipeCreator = document.querySelector('.cancel-recipe')
+  closeRecipeCreator.addEventListener('click', function(){
+      console.log('cancelling adding recipe')
+      document.getElementById('recipeForm').style.display = 'none'
 
-})
+  })
 
 
-saveRecipe = document.querySelector('.recipe-submit')
-saveRecipe.addEventListener('click', function(){
-    console.log('adding recipe')
+  saveRecipe = document.querySelector('.recipe-submit')
+  saveRecipe.addEventListener('click', function(){
+      console.log('adding recipe')
 
-    let recipeName = document.forms['recipeForm']['recipeName'].value
-    let creatorName = document.forms['recipeForm']['recipeSource'].value
-    let cookTime = document.forms['recipeForm']['recipeCookTime'].value
-    let fav = document.forms['recipeForm']['fav'].checked
-    let ingredients_string = document.forms['recipeForm']['recipeIngredients'].value
-    let instructions = document.forms['recipeForm']['recipeInstructions'].value
-    let photo = document.forms['recipeForm']['recipePhoto'].value
+      let recipeName = document.forms['recipeForm']['recipeName'].value
+      let creatorName = document.forms['recipeForm']['recipeSource'].value
+      let cookTime = document.forms['recipeForm']['recipeCookTime'].value
+      let fav = document.forms['recipeForm']['fav'].checked
+      let ingredients_string = document.forms['recipeForm']['recipeIngredients'].value
+      let instructions = document.forms['recipeForm']['recipeInstructions'].value
+      let photo = document.forms['recipeForm']['recipePhoto'].value
 
-    document.getElementById('recipeForm').style.display = 'none'
+      document.getElementById('recipeForm').style.display = 'none'
 
-    let ingredientArray = ingredients_string.split('\n')
+      let ingredientArray = ingredients_string.split('\n')
 
-    console.log(ingredientArray)
+      console.log(ingredientArray)
 
-   let recipe = {
-      id: 2,
-      image: photo,
-      name: recipeName,
-      creator: creatorName,
-      cookTime: cookTime,
-      under30: false,
-      favorite: fav,
-      ingredients: ingredientArray,
-      instructions: instructions,
-    }
+    let recipe = {
+        id: 2,
+        image: photo,
+        name: recipeName,
+        creator: creatorName,
+        cookTime: cookTime,
+        under30: false,
+        favorite: fav,
+        ingredients: ingredientArray,
+        instructions: instructions,
+      }
 
-    let recipeJSON = JSON.stringify(recipe)
-    console.log(recipeJSON)
-})
+      let recipeJSON = JSON.stringify(recipe)
+      console.log(recipeJSON)
+  })
+}
 
 
 
