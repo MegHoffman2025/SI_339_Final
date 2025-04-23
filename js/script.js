@@ -205,9 +205,9 @@ saveRecipe.addEventListener('click', function(){
 
     document.getElementById('recipeForm').style.display = 'none'
 
-    let csv_ingredient_string = ingredients_string.split('\n')
+    let ingredientArray = ingredients_string.split('\n')
 
-    console.log(csv_ingredient_string)
+    console.log(ingredientArray)
 
    let recipe = {
       id: 2,
@@ -217,7 +217,7 @@ saveRecipe.addEventListener('click', function(){
       cookTime: cookTime,
       under30: false,
       favorite: fav,
-      ingredients: csv_ingredient_string,
+      ingredients: ingredientArray,
       instructions: instructions,
     }
 
