@@ -38,6 +38,7 @@ ul {
 
 nav {
     position: sticky;
+    top: 0px;
     display: flex;
     flex-direction: row;
     align-items: left;
