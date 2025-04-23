@@ -125,6 +125,7 @@ function showDetail (){
       let newIngredient = document.createElement('li')
       newIngredient.innerText = thisRecipe.ingredients[i]
       if (thisRecipe.ingredients[i][0] == "*"){
+        ing.appendChild(document.createElement('br'))
            newIngredient = document.createElement('h3');
            newIngredient.innerText = thisRecipe.ingredients[i].slice(2, -2)
       }
