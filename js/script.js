@@ -6,6 +6,9 @@ fetch('/SI_339_Final/recipes.json')
 .then(response => response.json())
 .then(data => {
     potions = data;
+    potions.sort(function(a,b){
+      return a.name - b.name
+    })
     console.log(potions)
     if ((window.location.pathname == '/SI_339_Final/') || (window.location.pathname == '/SI_339_Final/index.html')){
       addDataToHTML();
