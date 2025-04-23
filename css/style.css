@@ -474,6 +474,10 @@ footer {
         border-radius: 20px;
     }
 
+    a.recipe-card{
+        align-items: flex-start;
+    }
+
     .recipe-card img{
         height: 150px;
         width: 100%;
