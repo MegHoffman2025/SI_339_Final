@@ -29,7 +29,7 @@
         <div id="overlay"></div>
         <h1>Recipes</h1>
     </header>
-    <main id="#skip">
+    <main id="skip">
         <div class="add-recipe">
             <span class="material-symbols-outlined">add</span>
         </div>
@@ -79,7 +79,10 @@
         <section class="all-recipes">
             <div class="recipes-header">
                 <h2>All Recipes</h2>
-                <input type="text" placeholder="Search" name="search" id="myInput" onkeyup="filterFunction()">    
+                <div>
+                    <label for="myInput">Find Recipes</label>
+                    <input type="text" placeholder="Search" name="search" id="myInput" onkeyup="filterFunction()">   
+                </div> 
             </div>
             <div class="cards"></div>
         </section>
