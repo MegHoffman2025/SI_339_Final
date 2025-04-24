@@ -212,35 +212,35 @@ if ((window.location.pathname == '/SI_339_Final/') || (window.location.pathname 
 
   saveRecipe = document.querySelector('.recipe-submit')
   saveRecipe.addEventListener('click', function(){
-      console.log('adding recipe')
+      // console.log('adding recipe')
 
-      let recipeName = document.forms['recipeForm']['recipeName'].value
-      let creatorName = document.forms['recipeForm']['recipeSource'].value
-      let cookTime = document.forms['recipeForm']['recipeCookTime'].value
-      let fav = document.forms['recipeForm']['fav'].checked
-      let ingredients = document.forms['recipeForm']['recipeIngredients'].value
-      let instructions = document.forms['recipeForm']['recipeInstructions'].value
-      let photo = document.forms['recipeForm']['recipePhoto'].value
+      // let recipeName = document.forms['recipeForm']['recipeName'].value
+      // let creatorName = document.forms['recipeForm']['recipeSource'].value
+      // let cookTime = document.forms['recipeForm']['recipeCookTime'].value
+      // let fav = document.forms['recipeForm']['fav'].checked
+      // let ingredients = document.forms['recipeForm']['recipeIngredients'].value
+      // let instructions = document.forms['recipeForm']['recipeInstructions'].value
+      // let photo = document.forms['recipeForm']['recipePhoto'].value
 
       document.getElementById('recipeForm').style.display = 'none'
       
-      let ingredientsArray = ingredients.split("\n")
+    //   let ingredientsArray = ingredients.split("\n")
 
 
-    let recipe = {
-        id: 2,
-        image: photo,
-        name: recipeName,
-        creator: creatorName,
-        cookTime: cookTime,
-        under30: false,
-        favorite: fav,
-        ingredients: ingredientsArray,
-        instructions: instructions,
-      }
+    // let recipe = {
+    //     id: 2,
+    //     image: photo,
+    //     name: recipeName,
+    //     creator: creatorName,
+    //     cookTime: cookTime,
+    //     under30: false,
+    //     favorite: fav,
+    //     ingredients: ingredientsArray,
+    //     instructions: instructions,
+    //   }
 
-      let recipeJSON = JSON.stringify(recipe)
-      console.log(recipeJSON)
+    //   let recipeJSON = JSON.stringify(recipe)
+    //   console.log(recipeJSON)
   })
 }
 
