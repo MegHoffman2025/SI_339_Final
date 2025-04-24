@@ -226,11 +226,9 @@ if ((window.location.pathname == '/SI_339_Final/') || (window.location.pathname 
       
       let ingredientsArray = ingredients.split("\n")
 
-      console.log(potions[-1].id)
-      let newId = (potions[-1].id) + 1
 
     let recipe = {
-        id: newId,
+        id: 2,
         image: photo,
         name: recipeName,
         creator: creatorName,
